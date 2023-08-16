@@ -44,22 +44,34 @@ function Menu() {
             <Link
               className="text-white uppercase"
               key={item.id}
-              href={item.url}>
+              href={item.url}
+              onClick={() => setIsOpen(false)}>
               {item.title}
             </Link>
           ))}
 
           {!user ? (
-            <Link className="text-white uppercase" href="/login">
+            <Link
+              className="text-white uppercase"
+              href="/login"
+              onClick={() => setIsOpen(false)}>
               Login
             </Link>
           ) : (
-            <Link className="text-white uppercase" href="/orders">
+            <Link
+              className="text-white uppercase"
+              href="/orders "
+              onClick={() => setIsOpen(false)}>
               Orders
             </Link>
           )}
-
-          <CartIcon />
+          <Link
+            href={"/cart"}
+            className="flex items-center text-white "
+            onClick={() => setIsOpen(false)}>
+            <CartIcon />
+            Cart(3)
+          </Link>
         </div>
       )}
     </div>
