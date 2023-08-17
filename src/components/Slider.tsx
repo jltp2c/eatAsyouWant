@@ -25,15 +25,18 @@ function Slider() {
   }, [announceIndex]);
 
   return (
-    <div className="flex flex-col h-full bg-red-300">
-      <div className=" h-1/2 flex flex-col text-red-500 font-bold justify-center items-center">
-        <h1 className="text-lg text-center my-20">{announce}</h1>
-        <button className="border-1 border-black text-white rounded-md bg-red-500 p-2  bottom-20">
+    <div className="flex flex-col h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)] lg:flex-row ">
+      <div className=" h-1/2 flex flex-col text-red-500 font-bold justify-center items-center bg-red-300 lg:h-full lg:w-1/2">
+        <h1 className="text-lg text-center my-20 md:text-2xl lg:text-5xl">
+          {announce}
+        </h1>
+        <button className="border-1 border-black text-white rounded-md bg-red-500 p-2 bottom-20">
           Order now
         </button>
       </div>
-      <div className="relative w-full h-1/2">
+      <div className="relative w-full h-1/2 lg:h-full lg:w-1/2">
         <Image
+          className="object-cover z-[-1000]"
           src={`/slide${announceIndex}.png`}
           alt={`slide${announceIndex}`}
           fill

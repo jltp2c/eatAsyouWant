@@ -39,7 +39,7 @@ function Menu() {
         )}
       </div>
       {isOpen && (
-        <div className="bg-red-500 flex flex-col justify-center items-center space-y-14 absolute h-500 left-0 top-[102px] h-[calc(100vh-6rem)] w-screen">
+        <div className="bg-red-500 flex flex-col justify-center items-center space-y-14 absolute  left-0 top-[102px] h-[calc(100vh-5.9rem)] w-screen">
           {menu.map((item) => (
             <Link
               className="text-white uppercase"
