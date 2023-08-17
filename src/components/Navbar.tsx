@@ -15,14 +15,14 @@ export const Navbar = () => {
         <Link href={"/"}>Contact</Link>
       </div>
       {/* LOGO */}
-      <Link className="text-red-500 font-bold" href="/">
+      <Link className="text-red-500  md:font-bold" href="/">
         EatAsYouWant
       </Link>
-      <div className="flex">
-        <Image src="/phone.png" width={20} height={20} alt="phone" />
-        <span>06 00 55 55 55</span>
-      </div>
       <div className="hidden md:flex flex-row gap-8 text-red-500">
+        <div className=" hidden md:flex bg-yellow-500 p-1 rounded-md">
+          <Image src="/phone.png" width={20} height={20} alt="phone" />
+          <span> 06 00 55 55 55</span>
+        </div>
         {user ? (
           <Link href={"/login"}>Login</Link>
         ) : (
