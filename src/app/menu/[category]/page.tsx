@@ -1,5 +1,6 @@
 import React from "react";
 import { pizzas, pastas, burgers } from "../../../../data";
+import Image from "next/image";
 
 interface pageProps {
   params: {
@@ -10,28 +11,76 @@ interface pageProps {
 function categoryPage({ params }: pageProps) {
   if (params.category === "pizzas") {
     return (
-      <div>
+      <div
+        className="flex flex-col justify-center  h-full text-center items-center
+       md:flex-row flex-wrap">
         {pizzas.map((item) => (
-          <h1 key={item.id}>{item.title}</h1>
-        ))}{" "}
+          <div
+            key={item.id}
+            className="p-5 border-b-2 border-red-500 md:border-none md:m-5 hover:bg-red-100 group">
+            {item.img && (
+              <Image src={item.img} alt={item.title} width={240} height={240} />
+            )}
+
+            <div className="flex relative items-center justify-between text-red-500 font-bold">
+              <h1 className="uppercase text-xs md:m-5">{item.title}</h1>
+              <p className="">{item.price} €</p>
+              <button className="hidden group-hover:block text-xs text-white rounded-md bg-red-500 p-2 absolute bottom-0 right-0 md:bottom-3 ">
+                Add to cart
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
     );
   }
   if (params.category === "pastas") {
     return (
-      <div>
+      <div
+        className="flex flex-col justify-center h-full text-center items-center
+       md:flex-row flex-wrap">
         {pastas.map((item) => (
-          <h1 key={item.id}>{item.title}</h1>
-        ))}{" "}
+          <div
+            key={item.id}
+            className="p-5 border-b-2 border-red-500 md:border-none md:m-5 hover:bg-red-100 group">
+            {item.img && (
+              <Image src={item.img} alt={item.title} width={240} height={240} />
+            )}
+
+            <div className="flex relative items-center justify-between text-red-500 font-bold">
+              <h1 className="uppercase text-xs md:m-5">{item.title}</h1>
+              <p className="">{item.price} €</p>
+              <button className="hidden group-hover:block text-xs text-white rounded-md bg-red-500 p-2 absolute bottom-0 right-0 md:bottom-3 ">
+                Add to cart
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
     );
   }
   if (params.category === "burgers") {
     return (
-      <div>
+      <div
+        className="flex flex-col justify-center text-center items-center  h-full
+       md:flex-row flex-wrap">
         {burgers.map((item) => (
-          <h1 key={item.id}>{item.title}</h1>
-        ))}{" "}
+          <div
+            key={item.id}
+            className="p-5 border-b-2 border-red-500 md:border-none md:m-5 hover:bg-red-100 group">
+            {item.img && (
+              <Image src={item.img} alt={item.title} width={240} height={240} />
+            )}
+
+            <div className="flex relative items-center justify-between text-red-500 font-bold">
+              <h1 className="uppercase text-xs md:m-5">{item.title}</h1>
+              <p className="">{item.price} €</p>
+              <button className="hidden group-hover:block text-xs text-white rounded-md bg-red-500 p-2 absolute bottom-0 right-0 md:bottom-3 ">
+                Add to cart
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
     );
   }

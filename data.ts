@@ -34,7 +34,133 @@ export const pastas: Products = [
 
   {
     id: 7,
-    title: "Garlic Parmesan Linguine",
+    title: "Garlic Linguine",
+    desc: "A garlic lover's delight, featuring linguine smothered in a creamy Parmesan sauce, infused with garlic and garnished with chopped parsley, bell peppers, and cherry tomatoes.",
+    img: "/temporary/p7.png",
+    price: 28.9,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "Garlic Linguine",
+    desc: "A garlic lover's delight, featuring linguine smothered in a creamy Parmesan sauce, infused with garlic and garnished with chopped parsley, bell peppers, and cherry tomatoes.",
+    img: "/temporary/p7.png",
+    price: 28.9,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "Garlic Linguine",
+    desc: "A garlic lover's delight, featuring linguine smothered in a creamy Parmesan sauce, infused with garlic and garnished with chopped parsley, bell peppers, and cherry tomatoes.",
+    img: "/temporary/p7.png",
+    price: 28.9,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "Garlic Linguine",
+    desc: "A garlic lover's delight, featuring linguine smothered in a creamy Parmesan sauce, infused with garlic and garnished with chopped parsley, bell peppers, and cherry tomatoes.",
+    img: "/temporary/p7.png",
+    price: 28.9,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "Garlic Linguine",
+    desc: "A garlic lover's delight, featuring linguine smothered in a creamy Parmesan sauce, infused with garlic and garnished with chopped parsley, bell peppers, and cherry tomatoes.",
+    img: "/temporary/p7.png",
+    price: 28.9,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "Garlic Linguine",
+    desc: "A garlic lover's delight, featuring linguine smothered in a creamy Parmesan sauce, infused with garlic and garnished with chopped parsley, bell peppers, and cherry tomatoes.",
+    img: "/temporary/p7.png",
+    price: 28.9,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "Garlic Linguine",
     desc: "A garlic lover's delight, featuring linguine smothered in a creamy Parmesan sauce, infused with garlic and garnished with chopped parsley, bell peppers, and cherry tomatoes.",
     img: "/temporary/p7.png",
     price: 28.9,
@@ -77,7 +203,69 @@ export const burgers: Products = [
       },
     ],
   },
-
+  {
+    id: 2,
+    title: "Bacon Deluxe",
+    desc: "Indulge in smoky goodness with a flame-grilled beef patty, topped with crispy bacon, melted cheddar cheese, caramelized onions, and a smattering of tangy BBQ sauce.",
+    img: "/temporary/p2.png",
+    price: 29.9,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Bacon Deluxe",
+    desc: "Indulge in smoky goodness with a flame-grilled beef patty, topped with crispy bacon, melted cheddar cheese, caramelized onions, and a smattering of tangy BBQ sauce.",
+    img: "/temporary/p2.png",
+    price: 29.9,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Bacon Deluxe",
+    desc: "Indulge in smoky goodness with a flame-grilled beef patty, topped with crispy bacon, melted cheddar cheese, caramelized onions, and a smattering of tangy BBQ sauce.",
+    img: "/temporary/p2.png",
+    price: 29.9,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
   {
     id: 5,
     title: "Jalapeño Fiesta",
@@ -121,15 +309,12 @@ export const burgers: Products = [
       },
     ],
   },
-];
-
-export const pizzas: Products = [
   {
-    id: 1,
-    title: "Sicilian",
-    desc: "Ignite your taste buds with a fiery combination of spicy pepperoni, jalapeños, crushed red pepper flakes, and melted mozzarella cheese, delivering a kick with every bite.",
-    img: "/temporary/p1.png",
-    price: 24.9,
+    id: 2,
+    title: "Bacon Deluxe",
+    desc: "Indulge in smoky goodness with a flame-grilled beef patty, topped with crispy bacon, melted cheddar cheese, caramelized onions, and a smattering of tangy BBQ sauce.",
+    img: "/temporary/p2.png",
+    price: 29.9,
     options: [
       {
         title: "Small",
@@ -147,10 +332,335 @@ export const pizzas: Products = [
   },
   {
     id: 2,
-    title: "Mediterranean Delight",
+    title: "Bacon Deluxe",
+    desc: "Indulge in smoky goodness with a flame-grilled beef patty, topped with crispy bacon, melted cheddar cheese, caramelized onions, and a smattering of tangy BBQ sauce.",
+    img: "/temporary/p2.png",
+    price: 29.9,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Bacon Deluxe",
+    desc: "Indulge in smoky goodness with a flame-grilled beef patty, topped with crispy bacon, melted cheddar cheese, caramelized onions, and a smattering of tangy BBQ sauce.",
+    img: "/temporary/p2.png",
+    price: 29.9,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Bacon Deluxe",
+    desc: "Indulge in smoky goodness with a flame-grilled beef patty, topped with crispy bacon, melted cheddar cheese, caramelized onions, and a smattering of tangy BBQ sauce.",
+    img: "/temporary/p2.png",
+    price: 29.9,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Bacon Deluxe",
+    desc: "Indulge in smoky goodness with a flame-grilled beef patty, topped with crispy bacon, melted cheddar cheese, caramelized onions, and a smattering of tangy BBQ sauce.",
+    img: "/temporary/p2.png",
+    price: 29.9,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Bacon Deluxe",
+    desc: "Indulge in smoky goodness with a flame-grilled beef patty, topped with crispy bacon, melted cheddar cheese, caramelized onions, and a smattering of tangy BBQ sauce.",
+    img: "/temporary/p2.png",
+    price: 29.9,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Bacon Deluxe",
+    desc: "Indulge in smoky goodness with a flame-grilled beef patty, topped with crispy bacon, melted cheddar cheese, caramelized onions, and a smattering of tangy BBQ sauce.",
+    img: "/temporary/p2.png",
+    price: 29.9,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Bacon Deluxe",
+    desc: "Indulge in smoky goodness with a flame-grilled beef patty, topped with crispy bacon, melted cheddar cheese, caramelized onions, and a smattering of tangy BBQ sauce.",
+    img: "/temporary/p2.png",
+    price: 29.9,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+];
+
+export const pizzas: Products = [
+  {
+    id: 1,
+    title: "Sicilian",
+    desc: "Ignite your taste buds with a fiery combination of spicy pepperoni, jalapeños, crushed red pepper flakes, and melted mozzarella cheese, delivering a kick with every bite.",
+    img: "/temporary/p1.png",
+    price: 15,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+  {
+    id: 1,
+    title: "Sicilian",
+    desc: "Ignite your taste buds with a fiery combination of spicy pepperoni, jalapeños, crushed red pepper flakes, and melted mozzarella cheese, delivering a kick with every bite.",
+    img: "/temporary/p1.png",
+    price: 15,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+
+  {
+    id: 1,
+    title: "Sicilian",
+    desc: "Ignite your taste buds with a fiery combination of spicy pepperoni, jalapeños, crushed red pepper flakes, and melted mozzarella cheese, delivering a kick with every bite.",
+    img: "/temporary/p1.png",
+    price: 15,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+
+  {
+    id: 1,
+    title: "Sicilian",
+    desc: "Ignite your taste buds with a fiery combination of spicy pepperoni, jalapeños, crushed red pepper flakes, and melted mozzarella cheese, delivering a kick with every bite.",
+    img: "/temporary/p1.png",
+    price: 15,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+
+  {
+    id: 1,
+    title: "Sicilian",
+    desc: "Ignite your taste buds with a fiery combination of spicy pepperoni, jalapeños, crushed red pepper flakes, and melted mozzarella cheese, delivering a kick with every bite.",
+    img: "/temporary/p1.png",
+    price: 15,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+
+  {
+    id: 1,
+    title: "Sicilian",
+    desc: "Ignite your taste buds with a fiery combination of spicy pepperoni, jalapeños, crushed red pepper flakes, and melted mozzarella cheese, delivering a kick with every bite.",
+    img: "/temporary/p1.png",
+    price: 15,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+
+  {
+    id: 1,
+    title: "Sicilian",
+    desc: "Ignite your taste buds with a fiery combination of spicy pepperoni, jalapeños, crushed red pepper flakes, and melted mozzarella cheese, delivering a kick with every bite.",
+    img: "/temporary/p1.png",
+    price: 15,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+
+  {
+    id: 1,
+    title: "Sicilian",
+    desc: "Ignite your taste buds with a fiery combination of spicy pepperoni, jalapeños, crushed red pepper flakes, and melted mozzarella cheese, delivering a kick with every bite.",
+    img: "/temporary/p1.png",
+    price: 15,
+    options: [
+      {
+        title: "Small",
+        additionalPrice: 0,
+      },
+      {
+        title: "Medium",
+        additionalPrice: 4,
+      },
+      {
+        title: "Large",
+        additionalPrice: 6,
+      },
+    ],
+  },
+
+  {
+    id: 2,
+    title: "Mediterranean",
     desc: "Embark on a culinary journey with this Mediterranean-inspired creation, featuring zesty feta cheese, Kalamata olives, sun-dried tomatoes, and a sprinkle of oregano.",
     img: "/temporary/p8.png",
-    price: 32.9,
+    price: 13,
     options: [
       {
         title: "Small",
@@ -192,7 +702,7 @@ export const pizzas: Products = [
     title: "Pesto Primavera",
     desc: "A classic Italian delight featuring a thin, crispy crust, tangy tomato sauce, fresh mozzarella, and a medley of aromatic herbs topped with lettuce, tomatoes, and a dollop of tangy mayo.",
     img: "/temporary/p10.png",
-    price: 28.9,
+    price: 16,
     options: [
       {
         title: "Small",
@@ -213,7 +723,7 @@ export const pizzas: Products = [
     title: "Veggie Supreme",
     desc: "A classic Italian delight featuring a thin, crispy crust, tangy tomato sauce, fresh mozzarella, and a medley of aromatic herbs topped with lettuce, tomatoes, and a dollop of tangy mayo.",
     img: "/temporary/p11.png",
-    price: 24.9,
+    price: 14,
     options: [
       {
         title: "Small",
@@ -231,7 +741,7 @@ export const pizzas: Products = [
   },
   {
     id: 6,
-    title: "Four Cheese Fantasy",
+    title: "Four Cheese",
     desc: "Experience pure cheesy bliss with a melty blend of mozzarella, cheddar, provolone, and Parmesan cheeses, creating a rich and indulgent pizza experience.",
     img: "/temporary/p12.png",
     price: 22.9,
