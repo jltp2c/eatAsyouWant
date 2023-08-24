@@ -5,7 +5,7 @@ import React from "react";
 import { menu } from "./../../../data";
 function MenuPage() {
   return (
-    <div className="flex h-screen flex-col items-center p-20 md:flex-row ">
+    <div className="flex h-screen flex-col items-center p-20 md:flex-row  md:h-[calc(100vh-10.9rem)]">
       {menu.map((item) => {
         return (
           <Link

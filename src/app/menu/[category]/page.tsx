@@ -13,14 +13,14 @@ function categoryPage({ params }: pageProps) {
   if (params.category === "pizzas") {
     return (
       <div
-        className="flex relative flex-col  justify-center text-center items-center
-       md:flex-row flex-wrap md:h-screen">
+        className="flex relative flex-col justify-center text-center items-center
+       md:flex-row flex-wrap h-[calc(100vh-5.9rem)]">
         {pizzas.map((item) => (
           <div
             key={item.id}
             className="p-5 border-b-2 border-red-500 md:border-none md:m-5 hover:bg-red-100 group">
             {item.img && (
-              <Link href={`/product/${item.id}`}>
+              <Link href={`/menu/${params.category}/${item.id}`}>
                 <Image
                   src={item.img}
                   alt={item.title}
@@ -45,14 +45,14 @@ function categoryPage({ params }: pageProps) {
   if (params.category === "pastas") {
     return (
       <div
-        className="flex flex-col justify-center  h-screen text-center items-center
-       md:flex-row flex-wrap">
+        className="flex flex-col h-screen justify-center text-center items-center
+       md:flex-row flex-wrap md:h-[calc(100vh-10.9rem)]">
         {pastas.map((item) => (
           <div
             key={item.id}
             className="p-5 border-b-2 border-red-500 md:border-none md:m-5 hover:bg-red-100 group">
             {item.img && (
-              <Link href={`/product/${item.id}`}>
+              <Link href={`/menu/${params.category}/${item.id}`}>
                 <Image
                   src={item.img}
                   alt={item.title}
@@ -78,13 +78,13 @@ function categoryPage({ params }: pageProps) {
     return (
       <div
         className="flex flex-col justify-center text-center items-center h-screen
-       md:flex-row flex-wrap">
+       md:flex-row flex-wrap md:h-[calc(100vh-10.9rem)]">
         {burgers.map((item) => (
           <div
             key={item.id}
             className="p-5 border-b-2 border-red-500 md:border-none md:m-5 hover:bg-red-100 group">
             {item.img && (
-              <Link href={`/product/${item.id}`}>
+              <Link href={`/menu/${params.category}/${item.id}`}>
                 <Image
                   src={item.img}
                   alt={item.title}
