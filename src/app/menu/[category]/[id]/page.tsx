@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import { pizzas, pastas, burgers } from "../../../../../data";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 interface pageProps {
   params: {
@@ -33,7 +36,7 @@ function SingleProduct({ params }: pageProps) {
         <h1 className="mb-5 text-red-500 font-bold">{product?.title}</h1>
         <p className="mb-5 text-red-500">{product?.desc}</p>
         <p className="mb-5 text-red-500 font-bold">{product?.price} €</p>
-        <div className="mb-10 flex justify-center gap-5 ">
+        <div className="mb-10 flex justify-center gap-12 ">
           {product?.options?.map((option) => (
             <button
               className="bg-white p-2 text-black border-2 border-red-500 rounded-xl "
@@ -43,7 +46,13 @@ function SingleProduct({ params }: pageProps) {
           ))}
         </div>
         <div className="flex justify-center 5">
-          <input type="number" placeholder="Quantity" />
+          <input
+            type="number"
+            placeholder="Quantity"
+            className="border-2 border-red-500 placeholder:pl-2 w-56 md:w-96"
+            max={9}
+            min={1}
+          />
           <button className="bg-red-500 p-2 text-white rounded-sm">
             Add in cart
           </button>

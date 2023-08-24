@@ -13,8 +13,8 @@ function categoryPage({ params }: pageProps) {
   if (params.category === "pizzas") {
     return (
       <div
-        className="flex relative flex-col justify-center text-center items-center
-       md:flex-row flex-wrap h-[calc(100vh-5.9rem)]">
+        className="flex flex-col flex-wrap justify-center text-center items-center
+       md:flex-row h-full md:h-[calc(100vh-5.9rem)]">
         {pizzas.map((item) => (
           <div
             key={item.id}
