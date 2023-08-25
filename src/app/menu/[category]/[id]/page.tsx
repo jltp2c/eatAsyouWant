@@ -13,12 +13,6 @@ interface pageProps {
   };
 }
 
-type ProductProps = {
-  price: number;
-  options?: { title: string; additionalPrice: number }[];
-  additionalPrice: number;
-};
-
 function findProductById(id: number) {
   // Recherchez le produit dans les différents tableaux
   const allProducts = [...pizzas, ...pastas, ...burgers];
@@ -54,16 +48,20 @@ function SingleProduct({ params }: pageProps) {
         <Image
           src={product?.img}
           alt={product?.title}
-          width={260}
-          height={260}
+          width={170}
+          height={170}
           className="mb-5 md:m-5 md:h-96 md:w-96"
         />
       )}
       <div className="w-5/6 md:w-2/6">
-        <h1 className="mb-5 text-red-500 font-bold">{product?.title}</h1>
-        <p className="mb-5 text-red-500">{product?.desc}</p>
-        <p className="mb-5 text-red-500 font-bold">{total?.toFixed(2)} €</p>
-        <div className="mb-10 flex justify-center gap-12 ">
+        <h1 className="mb-5 text-red-500 text-xl font-bold md:text-2xl">
+          {product?.title}
+        </h1>
+        <p className="mb-5 text-xs text-red-500 md:text-lg">{product?.desc}</p>
+        <p className="mb-5 text-red-500 text-xl font-bold md:text-2xl">
+          {total?.toFixed(2)} €
+        </p>
+        <div className="mb-10 text-xs flex justify-center gap-12 md:text-lg ">
           {product?.options?.map((option, index) => (
             <button
               className="bg-white p-2 text-black border-2 border-red-500 rounded-xl "
@@ -81,14 +79,14 @@ function SingleProduct({ params }: pageProps) {
           <input
             type="number"
             placeholder="Quantity"
-            className="border-2 border-red-500 placeholder:pl-2 w-56 md:w-96 p-2"
+            className="border-2 border-red-500 placeholder:pl-2 w-36 md:w-46 p-2 md:h-12 "
             max="9"
             min="1"
             defaultValue="1"
             onChange={(e) => setQuantity(parseInt(e.target.value))}
             onKeyDown={handleKeyDown}
           />
-          <button className="bg-red-500 p-2 text-white rounded-sm">
+          <button className="bg-red-500 p-2 text-white md:w-30">
             Add in cart
           </button>
         </div>
