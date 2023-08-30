@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { menu } from "./../../../data";
 import { MenuType } from "@/types/types";
 
 const getData = async () => {
@@ -17,7 +18,7 @@ const MenuPage = async () => {
   const menu: MenuType = await getData();
 
   return (
-    <div className="flex flex-col justify-center  items-center p-10 h-[calc(100vh-11.9rem)] md:flex-row">
+    <div className="flex flex-col justify-center items-center p-10 h-[calc(100vh-11.9rem)] md:flex-row">
       {menu.map((item) => {
         return (
           <Link
