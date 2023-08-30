@@ -1,9 +1,21 @@
-"use client";
-
 import Link from "next/link";
 import React from "react";
-import { menu } from "./../../../data";
-function MenuPage() {
+import { MenuType } from "@/types/types";
+
+const getData = async () => {
+  const res = await fetch(`http://localhost:3000/api/categories`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Something FAILED fetch");
+  }
+  return res.json();
+};
+
+const MenuPage = async () => {
+  const menu: MenuType = await getData();
+
   return (
     <div className="flex flex-col justify-center  items-center p-10 h-[calc(100vh-11.9rem)] md:flex-row">
       {menu.map((item) => {
@@ -24,6 +36,6 @@ function MenuPage() {
       })}
     </div>
   );
-}
+};
 
 export default MenuPage;

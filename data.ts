@@ -251,16 +251,7 @@ export const pizzas: Products = [
   },
 ];
 
-type Menu = {
-  id: number;
-  slug: string;
-  title: string;
-  desc?: string;
-  img?: string;
-  color: string;
-}[];
-
-export const menu: Menu = [
+export const menu = [
   {
     id: 1,
     slug: "pastas",
