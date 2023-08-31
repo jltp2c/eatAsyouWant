@@ -1,5 +1,3 @@
-import { Decimal } from "@prisma/client/runtime/library";
-
 export type MenuType = {
   id: number;
   slug: string;
@@ -16,4 +14,23 @@ export type Product = {
   img?: string;
   price: number;
   options?: { title: string; additionalPrice: number }[];
+};
+
+export type OrderType = {
+  id: string;
+  userEmail: string;
+  price: number;
+  products: CartItemType[];
+  status: string;
+  createAt: Date;
+  intent_id?: String;
+};
+
+export type CartItemType = {
+  id: string;
+  title: string;
+  img?: number;
+  price: object[];
+  optionTitle?: string;
+  quantity: number;
 };
