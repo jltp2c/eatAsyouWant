@@ -1,11 +1,12 @@
 "use client";
 
 import { OrderType } from "@/types/types";
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { ReactHTML } from "react";
+import { toast } from "react-toastify";
 
 const OrdersPage = () => {
   const { data: session, status } = useSession();
@@ -22,14 +23,38 @@ const OrdersPage = () => {
       fetch("http://localhost:3000/api/orders").then((res) => res.json()),
   });
 
+  const queryClient = useQueryClient();
+
+  const mutation = useMutation({
+    mutationFn: ({ id, status }: { id: string; status: string }) => {
+      return fetch(`http://localhost:3000/api/orders/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(status),
+      });
+    },
+    onSuccess() {
+      queryClient.invalidateQueries({ queryKey: ["orders"] });
+    },
+  });
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>, id: string) => {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const input = form.elements[0] as HTMLFormElement;
+    const status = input.value;
+    mutation.mutate({ id, status });
+    toast.success("Order status has been changed !");
+  };
+
   if (isLoading || status === "loading") {
     return <p>Loading...</p>;
   }
 
-  console.log("data FETEDD", data);
-
   return (
-    <div className="p-4 lg:px-20 xl:px-40">
+    <div className="p-4 lg:px-20 xl:px-40 h-[calc(100vh-11.9rem)]">
       <table className="w-full border-separate border-spacing-3">
         <thead>
           <tr className="text-left">
@@ -43,7 +68,9 @@ const OrdersPage = () => {
         <tbody>
           {data.map((item: OrderType) => {
             return (
-              <tr className="text-sm md:text-base bg-red-50" key={item.id}>
+              <tr
+                className={`${item.status !== "delivered" && "bg-red-50"}`}
+                key={item.id}>
                 <td className="hidden md:block py-6 px-1">{item.id}</td>
                 <td className="py-6 px-1">
                   {item.createAt.toString().slice(0, 10)}
@@ -54,7 +81,10 @@ const OrdersPage = () => {
                 </td>
                 {session?.user.isAdmin ? (
                   <td>
-                    <form action="" className="flex justify-center gap-2">
+                    <form
+                      action=""
+                      className="flex justify-center gap-2"
+                      onSubmit={(e) => handleSubmit(e, item.id)}>
                       <input
                         placeholder={item.status}
                         className="p-2 ring-1 ring-red-100 rounded-md"

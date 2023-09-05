@@ -35,7 +35,7 @@ const categoryPage = async ({ params }: pageProps) => {
           key={item.id}
           className="p-5 border-b-2 border-red-500 md:border-none md:m-5 hover:bg-red-100 group">
           {item.img && (
-            <Link href={`/menu/${params.category}/${item.id}`}>
+            <Link href={`/product/${item.id}`}>
               <Image src={item.img} alt={item.title} width={240} height={240} />
             </Link>
           )}

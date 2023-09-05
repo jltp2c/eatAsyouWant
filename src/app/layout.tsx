@@ -6,6 +6,8 @@ import Notification from "@/components/Notification";
 import Footer from "@/components/Footer";
 import AuthProvider from "@/components/AuthProvider";
 import QueryStack from "@/components/QueryStack";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +31,11 @@ export default function RootLayout({
               <Navbar />
               {children}
               <Footer />
+              <ToastContainer
+                position="bottom-right"
+                theme="dark"
+                autoClose={3000}
+              />
             </div>
           </QueryStack>
         </AuthProvider>
