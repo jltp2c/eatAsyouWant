@@ -8,10 +8,10 @@ export type MenuType = {
 }[];
 
 export type Product = {
-  id: number;
+  id: string;
   title: string;
-  desc?: string;
-  img?: string;
+  desc: string | null;
+  img: string | null;
   price: number;
   options?: { title: string; additionalPrice: number }[];
 };

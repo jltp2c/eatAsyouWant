@@ -16,6 +16,9 @@ const getData = async () => {
 const MenuPage = async () => {
   const menu: MenuType = await getData();
 
+  const elementToMove = menu.splice(0, 2);
+  menu.splice(1, 0, ...elementToMove);
+
   return (
     <div className="flex flex-col justify-center items-center p-10 h-[calc(100vh-11.9rem)] md:flex-row">
       {menu.map((item) => {
