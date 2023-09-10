@@ -25,7 +25,6 @@ export const Navbar = () => {
         <Userlink />
         <Link href={"/cart"} className="flex text-red-500">
           <CartIcon />
-          <span>(3)</span>
         </Link>
       </div>
       {/* Mobile view */}

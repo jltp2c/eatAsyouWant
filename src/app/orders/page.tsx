@@ -5,7 +5,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import React, { ReactHTML } from "react";
+import React from "react";
 import { toast } from "react-toastify";
 
 const OrdersPage = () => {

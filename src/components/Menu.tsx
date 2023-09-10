@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import CartIcon from "./CartIcon";
+import { useCartStore } from "@/utils/store";
 
 function Menu() {
   const menu = [
@@ -70,7 +71,6 @@ function Menu() {
             className="flex items-center text-white "
             onClick={() => setIsOpen(false)}>
             <CartIcon />
-            Cart(3)
           </Link>
         </div>
       )}

@@ -2,11 +2,33 @@
 
 import React, { useEffect, useState } from "react";
 import { Product } from "../types/types";
+import { useCartStore } from "@/utils/store";
+import { toast } from "react-toastify";
 
 const Price = ({ product }: { product: Product }) => {
   const [total, setTotal] = useState(product.price);
   const [quantity, setQuantity] = useState(1);
   const [selected, setSelected] = useState(0);
+
+  const { addToCart } = useCartStore();
+
+  useEffect(() => {
+    useCartStore.persist.rehydrate();
+  }, []);
+
+  const handleAdd = () => {
+    addToCart({
+      id: product.id,
+      title: product.title,
+      img: product.img,
+      price: total,
+      ...(product.options?.length && {
+        optionTitle: product.options[selected].title,
+      }),
+      quantity: quantity,
+    });
+    toast.success("Item added !");
+  };
 
   useEffect(() => {
     if (product.options?.length) {
@@ -53,7 +75,9 @@ const Price = ({ product }: { product: Product }) => {
           </div>
         </div>
         {/* CART BUTTON */}
-        <button className="uppercase w-56 bg-red-500 text-white p-3 ring-1 ring-red-500">
+        <button
+          className="uppercase w-56 bg-red-500 text-white p-3 ring-1 ring-red-500"
+          onClick={handleAdd}>
           Add to Cart
         </button>
       </div>

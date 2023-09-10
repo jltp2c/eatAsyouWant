@@ -1,10 +1,17 @@
-import React from "react";
-import Image from "next/image";
+"use client";
+
+import React, { useEffect } from "react";
+
+import { useCartStore } from "@/utils/store";
 
 function CartIcon() {
+  const { totalItems } = useCartStore();
+  useEffect(() => {
+    useCartStore.persist.rehydrate();
+  }, []);
   return (
-    <div className="relative w-8 h-8">
-      <Image src="/cart.png" alt="cart" className="absolute  top-0 p-1" fill />
+    <div className="relative flex justify-center w-8 h-8">
+      <span>Cart({totalItems})</span>
     </div>
   );
 }

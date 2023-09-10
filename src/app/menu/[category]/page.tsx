@@ -43,7 +43,7 @@ const categoryPage = async ({ params }: pageProps) => {
             <h1 className="uppercase text-xs md:m-5">{item.title}</h1>
             <p>{item.price.toString()}€</p>
             <button className="hidden group-hover:block text-xs text-white rounded-md bg-red-500 p-2 absolute bottom-0 right-0 md:bottom-3 ">
-              Add to cart
+              View
             </button>
           </div>
         </div>
