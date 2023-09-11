@@ -9,12 +9,13 @@ const CartPage = () => {
 
   useEffect(() => {
     useCartStore.persist.rehydrate();
+    // useCartStore.persist.clearStorage();
   }, []);
 
   return (
     <div className="h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)] flex flex-col text-red-500 lg:flex-row">
       {/* PRODUCTS CONTAINER */}
-      <div className="h-1/2 p-4 flex flex-col justify-center overflow-scroll lg:h-full lg:w-2/3 2xl:w-1/2 lg:px-20 xl:px-40">
+      <div className="h-1/2 p-4 flex flex-col justify-center overflow-scroll lg:h-full lg:w-2/3 2xl:w-1/2 lg:px-20 xl:px-40 ">
         {products.map((item) => {
           return (
             <div
@@ -34,7 +35,7 @@ const CartPage = () => {
                 </h1>
                 <span>{item.optionTitle}</span>
               </div>
-              <h2 className="font-bold">{item.price} €</h2>
+              <h2 className="font-bold">{item.price.toFixed(2)} €</h2>
               <span
                 className="cursor-pointer"
                 onClick={() => removeFromCart(item)}>
@@ -75,11 +76,7 @@ const CartPage = () => {
         <button className="bg-red-500 text-white p-3 rounded-md self-end">
           CHECKOUT
         </button>
-        <button
-          className="bg-red-500 text-white p-3 rounded-md self-end"
-          onClick={removeFromCart}>
-          Delete All
-        </button>
+
         <p className="text-xs">
           *Service cost and delivery cost FREE equal and more than 50 €{" "}
         </p>

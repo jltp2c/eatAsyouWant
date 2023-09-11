@@ -16,6 +16,14 @@ const Price = ({ product }: { product: Product }) => {
     useCartStore.persist.rehydrate();
   }, []);
 
+  useEffect(() => {
+    if (product.options?.length) {
+      setTotal(
+        quantity * product.price + product.options[selected].additionalPrice
+      );
+    }
+  }, [quantity, selected, product]);
+
   const handleAdd = () => {
     addToCart({
       id: product.id,
@@ -29,14 +37,6 @@ const Price = ({ product }: { product: Product }) => {
     });
     toast.success("Item added !");
   };
-
-  useEffect(() => {
-    if (product.options?.length) {
-      setTotal(
-        quantity * product.price + product.options[selected].additionalPrice
-      );
-    }
-  }, [quantity, selected, product]);
 
   return (
     <div className="flex flex-col gap-4">
